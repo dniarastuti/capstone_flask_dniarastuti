@@ -12,7 +12,7 @@ playstore = pd.read_csv('data/googleplaystore.csv')
 pd.set_option('display.float_format', lambda x: '%.1f' % x)
 
 # Hapus data yang duplikat berdasarkan kolom App, dengan tetap keep data pertama (hint : gunakan parameter subset)
-playstore.drop_duplicates(subset = None, keep='first',inplace=True)
+playstore.drop_duplicates(keep='first',inplace=True)
 
 # bagian ini untuk menghapus row 10472 karena nilai data tersebut tidak tersimpan pada kolom yang benar
 playstore.drop([10472], inplace=True)
